@@ -4,7 +4,6 @@ This project template is a skeleton for starter Front End web application based 
 ### Directory Layout
 
 ```
-.
 ├── /fonts/                     # Font base files
 ├── /img/                       # Images related files
 ├── /js/                        # Javascript files
