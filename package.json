@@ -1,0 +1,31 @@
+{
+  "name": "frontend-sass",
+  "version": "1.0.0",
+  "description": "This project template is a skeleton for starter Front End web application based on Sass. This repository is created for internal/personal/public general web project use.",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "gulp": "^3.9.0"
+  },
+  "devDependencies": {
+    "gulp-ruby-sass": "^1.0.5",
+    "gulp-uglify": "^1.2.0"
+  },
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/honminyue/frontend-sass.git"
+  },
+  "keywords": [
+    "gulp",
+    "frontend",
+    "sass"
+  ],
+  "author": "Hon Min Yue",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/honminyue/frontend-sass/issues"
+  },
+  "homepage": "https://github.com/honminyue/frontend-sass#readme"
+}
