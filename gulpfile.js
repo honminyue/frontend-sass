@@ -1,11 +1,7 @@
 var gulp = require('gulp');
 var uglify = require('gulp-uglify');
-var sass = require('gulp-ruby-sass');
-
-function errorLog (error) {
-  console.error.bind(error);
-  this.emit('end');
-}
+var sass = require('gulp-sass');
+var sourcemaps = require('gulp-sourcemaps');
 
 // Scripts Task - Uglify
 gulp.task('scripts', function(){
@@ -17,12 +13,11 @@ gulp.task('scripts', function(){
 // Styles Task - Sass
 gulp.task('styles', function(){
   gulp.src('sass/style.scss')
-    .pipe(sass())
-    // .pipe(sass({
-    //   style: 'compressed'
-    // }))
-    // .on('error', errorLog)
-    // .pipe(gulp.dest('dist/css'));
+    .pipe(sourcemaps.init())
+    .pipe(sass({outputStyle: 'compressed'})
+      .on('error', sass.logError))
+    .pipe(sourcemaps.write())
+    .pipe(gulp.dest('dist/css'));
 });
 
 // Watch Task
