@@ -21,9 +21,11 @@
   "keywords": [
     "gulp",
     "frontend",
-    "sass"
+    "sass",
+    "postcss",
+    "workflow"
   ],
-  "author": "Hon Min Yue",
+  "author": "Hon Min Yue <honminyue@gmail.com>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/honminyue/frontend-sass/issues"
