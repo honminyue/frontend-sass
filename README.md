@@ -22,3 +22,14 @@ This project template is a skeleton for starter Front End web application based 
 │── package.json                    # The list of 3rd party libraries and utilities
 │── bower.json                      # The list of 3rd party packages files
 ```
+
+## Features
+
+* CSS Autoprefixing
+* HTML/Javascript Template Engine
+* PostCSS [More info](https://github.com/postcss/postcss)
+* Component styles, layout concept
+* Automagically lint your scripts
+* Map compiled CSS to source stylesheets with source maps
+* Awesome image optimization
+* Automagically wire-up dependencies installed with [Bower](http://bower.io)
