@@ -1,23 +1,31 @@
 var gulp = require('gulp');
-var uglify = require('gulp-uglify');
-var sass = require('gulp-sass');
-var sourcemaps = require('gulp-sourcemaps');
+var del = require('del');
 
-// Scripts Task - Uglify
+var paths = {
+  styles: 'sass/**/*.scss',
+  scripts: 'app/js/*.js',
+  images: 'app/img/**/*'
+};
+
+// Scripts Task
 gulp.task('scripts', function(){
-  gulp.src('js/*.js')
-    .pipe(uglify())
+  gulp.src(paths.scripts)
+    // .pipe()
     .pipe(gulp.dest('dist/js'));
 });
 
-// Styles Task - Sass
+// Styles Task
 gulp.task('styles', function(){
-  gulp.src('sass/style.scss')
-    .pipe(sourcemaps.init())
-    .pipe(sass({outputStyle: 'compressed'})
-      .on('error', sass.logError))
-    .pipe(sourcemaps.write())
+  gulp.src(paths.styles)
+    // .pipe()
     .pipe(gulp.dest('dist/css'));
+});
+
+// Images Task
+gulp.task('images', function(){
+  gulp.src(paths.images)
+    // .pipe()
+    .pipe(gulp.dest('dist/img'));
 });
 
 // Watch Task
@@ -26,4 +34,6 @@ gulp.task('watch', function(){
   gulp.watch('sass/**/*.scss', ['styles']);
 })
 
-gulp.task('default', ['scripts', 'styles', 'watch']);
+gulp.task('clean', del.bind(null, ['.tmp', 'dist', '.sass-cache']));
+
+gulp.task('default', ['watch']);
