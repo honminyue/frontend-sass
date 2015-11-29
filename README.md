@@ -23,7 +23,7 @@ This project template is a skeleton for starter Front End web application based 
 │── bower.json                      # The list of 3rd party packages files
 ```
 
-## Features
+### Features
 
 * CSS Autoprefixing
 * HTML/Javascript Template Engine
