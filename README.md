@@ -16,8 +16,8 @@ This project template is a skeleton for starter Front End web application based 
 │   │   ├── /pages/                 # Standalone pages scss
 │   │   ├── /utility/               # Variables, mixins
 │   │   ├── /vendor/                # Plugin scss
-│   │   ├── /bootstrap.scss         # Bootstrap 4 components (Not Confirm)
-│   │   ├── /style.scss             # Imports all core scss files
+│   │   ├── bootstrap.scss         # Bootstrap 4 components (Not Confirm)
+│   │   ├── style.scss             # Imports all core scss files
 │── gulpfile.js                 # Configuration file for Gulp logic
 │── package.json                # The list of 3rd party libraries and utilities
 │── bower.json                  # The list of 3rd party packages files
