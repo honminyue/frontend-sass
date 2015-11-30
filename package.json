@@ -21,7 +21,9 @@
     "frontend",
     "sass",
     "postcss",
-    "workflow"
+    "workflow",
+    "yeoman",
+    "generator"
   ],
   "author": "Hon Min Yue <honminyue@gmail.com>",
   "license": "MIT",
