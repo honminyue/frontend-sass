@@ -68,7 +68,7 @@ filter: sepia(.8);
 	opacity: 0.9;
 	p {
 		margin-top: 10px;
-		padding: 10em;
+		padding: 10rem;
 		transition: all .3s ease-out;
 	}
 	a {
