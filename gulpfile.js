@@ -1,4 +1,5 @@
 var gulp = require('gulp');
+var connect = require('gulp-connect');
 var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
 var imagemin = require('gulp-imagemin');
@@ -48,15 +49,33 @@ gulp.task('images', function(){
     .pipe(gulp.dest('dist/img'));
 });
 
+// Html Task
+gulp.task('html', function () {
+  gulp.src('app/*.html')
+    .pipe(connect.reload());
+});
+
+// Connect Task
+gulp.task('connect', function() {
+  connect.server({
+    root: 'app',
+    livereload: true
+  });
+});
+
 // Watch Task
 gulp.task('watch', function(){
   gulp.watch(paths.styles, ['styles']);
   gulp.watch(paths.scripts, ['scripts']);
   gulp.watch(paths.images, ['images']);
+  gulp.watch(['app/*.html'], ['html']);
 });
 
 // Clean Task
 gulp.task('clean', del.bind(null, ['.tmp', 'dist', '.sass-cache']));
 
+// Serve Task
+gulp.task('serve', ['connect', 'watch']);
+
 // Default Task
-gulp.task('default', ['styles', 'scripts', 'images', 'watch']);
+gulp.task('default', ['styles', 'scripts', 'images']);
