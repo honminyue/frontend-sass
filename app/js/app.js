@@ -7,6 +7,7 @@
   $(document).ready(function() {
     //console.log('Current breakpoint:', viewport.current());
 
+
     // Prevent Hask Link
     $('a[href="#"]').on('click', function (e) {e.preventDefault(); });
     console.log('test watchss hello');
